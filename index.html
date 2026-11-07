@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ITEMS-0F-AMAZON Store</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&family=Saira+Stencil+One&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="r">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="ITEMS-OF-AMAZON home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <path d="M7 12h20l-1.6 15.2a2 2 0 0 1-2 1.8H10.6a2 2 0 0 1-2-1.8L7 12Z" fill="none" stroke="#f2f5ee" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M12 12V10a5 5 0 0 1 10 0v2" fill="none" stroke="#f2f5ee" stroke-width="2" stroke-linecap="round"/>
+        <path d="M11 22c4 2.6 8 2.6 12 0" fill="none" stroke="#f0a020" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>ITEMS-OF-AMAZON</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#top" aria-current="page">Home</a><i class="sep"></i>
+      <a href="#contact">Contact</a><i class="sep"></i>
+      <div class="shop">
+        <button class="link" id="shopBtn" type="button" aria-haspopup="true" aria-expanded="false">
+          SHOP NOW
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="menu" id="shopMenu" role="menu" hidden></div>
+      </div>
+      <button class="iconbtn" id="searchBtn" type="button" aria-label="Search products" aria-expanded="false">
+        <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M16.5 16.5L22 22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+  </div>
+  <div class="searchrow" id="searchRow" hidden>
+    <div class="wrap"><input id="q" type="search" placeholder="Search products" autocomplete="off" aria-label="Search products"></div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>&lt;  ITEMS -OF <b>-AMAZON</b> &gt;</h1>
+      <p>Amazing products are just a click away — discover, shop, and enjoy!</p>
+      <a class="cta" href="#products">SHOP NOW</a>
+      <div class="rule"></div>
+    </div>
+  </div>
+
+  <section aria-labelledby="featuredTitle">
+    <div class="wrap">
+      <p class="eyebrow">Featured</p>
+      <h2 class="featured-title" id="featuredTitle">This Week Trending Items--</h2>
+      <div class="slider" id="slider" tabindex="0" aria-roledescription="carousel" aria-label="Featured products">
+        <div class="frame">
+          <div class="track" id="track"></div>
+          <button class="arrow prev" id="prev" type="button" aria-label="Previous photo">
+            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M14 4l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="arrow next" id="next" type="button" aria-label="Next photo">
+            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M8 4l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="dots" id="dots"></div>
+        <p class="caption" id="caption" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" aria-labelledby="productsTitle">
+    <div class="wrap">
+      <p class="eyebrow" id="count"></p>
+      <h2 id="productsTitle">All products</h2>
+      <div class="filters" id="filters" role="group" aria-label="Filter by category"></div>
+      <div class="list" id="list"></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2 id="contactTitle">Contact</h2>
+      <dl class="facts">
+        <div class="fact"><dt>Email</dt><dd><code id="emailText"></code><button class="copy" type="button" data-copy="emailText">Copy</button></dd></div>
+        <div class="fact"><dt>Phone no.</dt><dd><code id="phoneText"></code><button class="copy" type="button" data-copy="phoneText">Copy</button></dd></div>
+      </dl>
+      <a class="help" id="helpLink" href="#contact">FOR ANY PROBLEM CLICK HERE</a><br>
+      <a class="btn" id="contactBtn" href="https://docs.google.com/forms/d/e/1FAIpQLSfEFovO8D803ulRlJxWEHcoegTSv8gG4IERk7UQvcBi1E0LdA/viewform?usp=header" target="_blank" rel="noopener noreferrer">Submit Report</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><p>Product links open the seller's page. Prices and availability are set by the seller and can change.</p></div>
+</footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
